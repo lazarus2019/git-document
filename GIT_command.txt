@@ -1,0 +1,71 @@
+SETTING trước khi nghịch với github VSCode
+git --version: Kiểm tra version git.
+git config --list: Check vài thứ linh tinh.
+git config --global user.name "Yourname": Cài đặt tên cho người chỉnh sửa.
+git config --global user.email "YourEmail@gmail.com": Cài đặt email cho người chỉnh sửa.
+
+add -> commit -> push
+
+// GIT COMMAND
+git clone URL: Clone repo từ URL github.
+git init: Tạo mới repostory (kho chứa git mới)
+git add .: Để lưu vùng sửa lỗi vào vùng staged hoặc bắt đầu theo dõi (tracked) file trong git.
+git commit -m "Thong bao": Để lưu trữ dữ liệu được đánh dấu ở vùng Staged vào vùng dữ liệu git.
+git log: Xem lịch sử commmit.
+git log --oneline: Xem lịch sử commit vắn tắt.
+git log -n: Xem n commit mới nhất.
+git checkout [Mã_commit] -- file_name: Phục hồi file ở commmit cũ.
+git status: Kiểm tra trạng thái của file trong thư mục git so với commit cuối cùng.
+git checkout -- file_name: Phục hồi file theo commit cuối.
+git commit --amend -m "Thong bao": Cập nhật lại commit cuối.
+git diff: Kiểm tra sự thay đổi trong git so với commit cuối.
+git diff branch_original branch_change: Kiểm tra sự thay đổi của 2 branch trước khi merge.
+git diff [Mã_commit] [Mã_commit]: So sánh sự thay đổi của 2 commit.
+git diff --staged: Xem sự thay đổi giữa staged và commit cuối.
+git restore file_name: Khôi phục lại file hoặc dùng . để khôi phục tất cả theo commit cuối.
+git remote add origin [URL]: Đồng bộ git trong máy và trên github
+git push -u origin branch_name: Push git trong brand_name lên repo của github (chỉ sử dụng 1 lần).
+git push: Push git trong máy lên repo github.
+git branch branch_name: Tạo mới 1 branch (nhánh) khác cho repo.
+git checkout branch_name: Truy cập hoặc chuyển qua lại giữa các branch.
+git checkout -b branch_name: Tạo mới và truy cập vào branch.
+git branch -d branch_name: Xóa branch.
+git branch: Kiểm tra branch trong máy.
+git push --set-upstream origin branch_name / git push origin branch_name: Thêm 1 branch lên repo của github.
+git merge branch_name: Merge (ghép) các branch lại với nhau.
+git pull: Lấy bản sao từ nhánh và hợp nhất với bản local hiện tại
+git pull --no-commit: Tìm nạp content vào local nhưng không tạo commit merge mới.
+clear: Xóa màn hình hiển thị.
+
+
+
+// CMD COMMAND
+cd folder_name/URL: Truy cập vào thư mục.
+md folder_name_1 folder_name_2: Tạo 1 hoặc nhiều thư mục mới.
+rd folder_name_1 folder_name_2: Xóa 1 hoặc nhiều thư mục.
+dir folder_name: Liệt kê tất file và folder có trong thư mục.
+del file_name: xóa file.
+cls: Clear màn hình hiển thị.
+
+
+-------------
+Tạo và làm việc với branch
+B1: Sử dụng lệnh git branch branch_name hoặc git checkout -b branch_name để tạo mới branch.
+B2: Truy cập vào branch bằng lệnh git checkout branch_name.
+B3: Add branch lên repo github bằng lệnh git push --set-upstream origin branch_name.
+B4: Dùng lệnh git push để push lên vùng chỉnh sửa trong branch.
+
+-------------
+Bỏ qua file, folder không tracking.
+B1: Tạo file .gitignore.
+B2: Liệt kê các file hoặc folder hoặc các file có đuối *.xxx để bỏ qua.
+B3: Lưu vùng sửa đối .gitignore bằng lệnh git add .gitignore
+
+-------------
+Pull request lên repo github
+B1: Vào project trên github.
+B2: Vào mục Pull requests và chọn New pull request.
+B3: Chọn branch muốn compare.
+B4: Kiểm tra commit và file thay đổi và phản hồi code bằng cách comment.
+B5: Nhấn Create pull request nếu đã thấy mọi thứ đều ổn.
+B6: Nhấn merge tất cả.
