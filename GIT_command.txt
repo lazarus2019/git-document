@@ -14,6 +14,7 @@ git commit -m "Thong bao": Để lưu trữ dữ liệu được đánh dấu �
 git log: Xem lịch sử commmit.
 git log --oneline: Xem lịch sử commit vắn tắt.
 git log -n: Xem n commit mới nhất.
+git log -p -n: Xem n commit mới nhất và bao gồm thay đổi.
 git checkout [Mã_commit] -- file_name: Phục hồi file ở commmit cũ.
 git status: Kiểm tra trạng thái của file trong thư mục git so với commit cuối cùng.
 git checkout -- file_name: Phục hồi file theo commit cuối.
@@ -31,11 +32,29 @@ git checkout branch_name: Truy cập hoặc chuyển qua lại giữa các branc
 git checkout -b branch_name: Tạo mới và truy cập vào branch.
 git branch -d branch_name: Xóa branch.
 git branch: Kiểm tra branch trong máy.
+git branch -a: Xem tất cả các branch.
 git push --set-upstream origin branch_name / git push origin branch_name: Thêm 1 branch lên repo của github.
 git merge branch_name: Merge (ghép) các branch lại với nhau.
 git pull: Lấy bản sao từ nhánh và hợp nhất với bản local hiện tại
 git pull --no-commit: Tìm nạp content vào local nhưng không tạo commit merge mới.
+git diff --cached origin/master: Xem thay đổi trước khi push.
+git show COMMIT_ID: Xem thông tin cụ thể của một commit.
+git revert COMMIT_ID: Revert một commit.
+git reset --soft HEAD~1: Undo commit gần nhất, vẫn giữ thay đổi ở local.
+git reset --hard HEAD~1: Undo commit gần nhất, không giữ thay đổi ở local.
+git reset --mixed HEAD~1 hoặc git reset HEAD~1: Undo commit gần nhất, vẫn giữ thay đổi ở index.
+git reset origin/master: Undo commits chưa push.
+git clean -f: Xoá toàn bộ các files chưa đc track.
+git clean -f -d: Xoá cả folder.
+git clean -n -f -d: Xem các file trước khi xoá.
 clear: Xóa màn hình hiển thị.
+
+Xem thêm tại:
+https://www.tma.vn/Hoi-dap/Cam-nang-nghe-nghiep/Tap-hop-nhung-cau-lenh-GIT-huu-dung/28081
+https://yunwuxin1.gitbooks.io/git/content/vi/5079164e9f1c7451fee450406abd31e6/bc3c8c8918e08c96d6dde84adf7a8e74.html
+https://rogerdudler.github.io/git-guide/index.vi.html
+https://git-scm.com/docs/git
+
 
 
 
